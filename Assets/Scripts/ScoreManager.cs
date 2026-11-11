@@ -10,16 +10,7 @@ public class ScoreManager : MonoBehaviour
     {
         instance = this;
     }
-    void Start()
-    {
-        //instance = this;
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void UpdateScoreUi()
     { 
         if (Score < 1)
@@ -28,21 +19,21 @@ public class ScoreManager : MonoBehaviour
         }
         else
         {
-            scoreText.text = "Score : " + Score.ToString();
+            scoreText.text = $"Score : {Score}";
         }
     }
     public void addScore(int amount) 
     {
          Score += amount;
          UpdateScoreUi();
-         Debug.Log($"+ {amount} Score");
+         print($"+ {amount} Score");
     }
 
-      public void removeScore(int amount) 
+    public void removeScore(int amount) 
     {
          Score -= amount;
          UpdateScoreUi();
-         Debug.Log($"- {amount} Score");
+         print($"- {amount} Score");
     }
 
 }

@@ -10,8 +10,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip redBallSound;
     [SerializeField] private AudioClip jumpSound;
     [SerializeField] private AudioClip backgroundMusic;
+    [SerializeField] private AudioClip teleport;
 
-private void Awake()
+    private void Awake()
     {
         instance = this;
     }
@@ -20,23 +21,24 @@ private void Awake()
         musicSource.clip = backgroundMusic;
         musicSource.loop = true;
         musicSource.Play();
-        print("music played");
     }
 
     public void playGreenBallSound()
     {
-        print("green ball sound played");
         sfxSource.PlayOneShot(greenBallSound);
     }
     public void playRedBallSound()
     {
-        print("red ball sound played");
         sfxSource.PlayOneShot(redBallSound);
     }
     public void playJumpSound()
     {
-        print("jump sound played");
         sfxSource.PlayOneShot(jumpSound);
+    }
+
+    public void playTeleport()
+    {
+        sfxSource.PlayOneShot(teleport);
     }
     void Update()
     {
