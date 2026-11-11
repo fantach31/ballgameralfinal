@@ -78,8 +78,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (other.CompareTag("Teleporter"))
         {
-            transform.position = teleportTarget.transform.position;
-            AudioManager.instance.playTeleport();
+            SceneController.instance.resetLevel();
         }
     }
 }

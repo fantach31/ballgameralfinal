@@ -44,6 +44,12 @@ public class SceneController : MonoBehaviour
             print("Oyunu kazandýn!");
         }
     }
+    public void resetLevel()
+    {
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
+        print($"Bölüm sýfýrlandý.");
+        SceneManager.LoadScene(currentScene);
+    }
     void Update()
     {
   

@@ -1,4 +1,6 @@
 Batuhan Arda Günbatı 2602020019
+Github:
+Oynanış Videosu:
 
 Bir topu yöneterek oynadığımız üç bölümden oluşan bir oyun. Amacımız yeşil topları toplayıp engellerden uzak durarak üç bölümü tamamlamak.
 
